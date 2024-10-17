@@ -1,0 +1,173 @@
+.bar {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /*  height: calc(var(--vh, 1vh) * 100); */
+    @media (min-width: 375px) and (max-width: 1040px) {
+        width: 300px;
+        height: calc(var(--vh, 1vh) * 100);
+        position: absolute;
+        background-color: #5d5d5d;
+        transition: 0.6s;
+        left: -100%;
+        z-index: 900;
+        background: url("../images/bg.webp") no-repeat center/cover;
+    }
+    @media (max-width: 375px) {
+        width: 80%;
+        height: calc(var(--vh, 1vh) * 100);
+        position: absolute;
+        background-color: #5d5d5d;
+        transition: 0.6s;
+        left: -100%;
+        z-index: 900;
+        background: url("../images/bg.webp") no-repeat center/cover;
+    }
+    &_active {
+        left: 0;
+    }
+    input {
+        flex-shrink: 0;
+        width: 100%;
+        min-height: 8%;
+        padding: 5px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--inputs-dark);
+        color: var(--special-color);
+        font-size: 16px;
+        &::placeholder {
+            text-align: left;
+            color: rgb(96, 91, 91);
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+
+    .search__result {
+        flex-shrink: 0;
+        display: none;
+        width: 100%;
+        height: 100px;
+        flex-direction: column;
+        gap: 5px;
+        padding: 5px;
+        color: aliceblue;
+        background-color: #2c2c2c;
+        overflow: auto;
+        border-top: 2px solid rgb(122, 120, 120);
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #069393;
+            width: 20px;
+            width: 8px;
+            border-radius: 5px;
+        }
+        p {
+            width: 100%;
+            height: 25px;
+            flex-shrink: 0;
+            color: #069393;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+    }
+    .user__wrapper {
+        flex-shrink: 1;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        overflow-y: auto;
+        padding-top: 20px;
+        position: relative;
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #069393;
+            width: 20px;
+            width: 8px;
+            border-radius: 5px;
+        }
+        .chat__user {
+            width: 100%;
+            height: 80px;
+            padding: 5px;
+            position: relative;
+            background-color: #045858;
+            /* backdrop-filter: blur(20px); */
+            border-top: 1px solid rgb(91, 91, 91);
+            /*  border-bottom: 1px solid rgb(91, 91, 91); */
+            display: flex;
+            cursor: pointer;
+            &_mess-wrap {
+                max-width: 300px;
+                pointer-events: none;
+                .txt {
+                    font-size: 15px;
+                    position: absolute;
+                    left: 20%;
+                    bottom: 0;
+                    color: var(--text-whiteopacity);
+                }
+                .time {
+                    position: absolute;
+                    right: 20%;
+                    bottom: 0;
+                    color: var(--text-whiteopacity);
+                }
+                .name {
+                    color: white;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+            }
+            &-img {
+                display: block;
+                pointer-events: none;
+                margin-right: 10px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #fff;
+                object-fit: contain;
+                @media (max-width: 320px) {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+            &-del {
+                display: block;
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                right: 1%;
+                cursor: pointer;
+            }
+
+            .missed_mess {
+                display: none;
+                position: absolute;
+                right: 1%;
+                bottom: 5%;
+                width: 20px;
+                height: 20px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background-color: rgb(195, 4, 4);
+                color: var(--white);
+            }
+        }
+    }
+}

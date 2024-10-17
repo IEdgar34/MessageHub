@@ -1,0 +1,168 @@
+.chat {
+    position: relative;
+    /*  height: calc(var(--vh, 1vh) * 100); */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    align-content: end;
+    overflow-y: hidden;
+    textarea {
+        width: 100%;
+        min-height: 48px;
+        padding: 5px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        border: none;
+        background-color: var(--inputs-dark);
+        border-radius: 5px;
+        color: var(--special-color);
+        font-size: 16px;
+        font-weight: 500;
+        text-align: left;
+        outline: none;
+        resize: none;
+        /*  overflow-y: auto; */
+        &::placeholder {
+            text-align: left;
+            color: var(--placeholder-dark);
+            font-size: 18px;
+            font-weight: 500;
+        }
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--special-color);
+            width: 20px;
+            width: 8px;
+            border-radius: 5px;
+        }
+    }
+    &__message-wrapper {
+        width: 99%;
+        height: auto;
+        margin: 0 auto;
+    }
+    &__message-send {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 20px;
+        bottom: 9px;
+        border-radius: 50%;
+        background-color: var(--white);
+        cursor: pointer;
+        img {
+            width: 30px;
+        }
+    }
+    &__wrap {
+        width: 100%;
+        /* height: auto; */
+        overflow-y: auto;
+        img {
+            background-color: transparent;
+        }
+        &::placeholder {
+            text-align: left;
+            color: var(--placeholder-dark);
+            font-size: 18px;
+            font-weight: 500;
+        }
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--special-color);
+            width: 20px;
+            width: 8px;
+            border-radius: 5px;
+        }
+        &-username {
+            position: absolute;
+            max-width: 300px;
+            height: 30px;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            color: var(--white);
+            text-align: center;
+            @media (max-width: 650px) {
+                font-size: 20px;
+            }
+        }
+        .right {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            padding-right: 10px;
+            display: flex;
+            justify-content: end;
+            .text {
+                width: auto;
+                max-width: 30%;
+                flex-shrink: 0;
+                text-align: right;
+                height: auto;
+                background-color: var(--message-right);
+                border-radius: 5px;
+                color: var(--text-whitesmok);
+                font-size: 18px;
+                padding: 5px;
+                word-break: break-all;
+                @media (max-width: 650px) {
+                    max-width: 80%;
+                }
+                p {
+                    font-size: 18px;
+                    font-weight: 100;
+                }
+                .time {
+                    font-size: 12px;
+                    text-align: right;
+                }
+            }
+        }
+        .left {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            display: flex;
+            justify-content: start;
+            .text {
+                width: auto;
+                max-width: 30%;
+                flex-shrink: 0;
+                height: auto;
+                background-color: var(--message-left);
+                border-radius: 5px;
+                color: var(--text-whitesmok);
+                font-size: 18px;
+                text-align: left;
+                padding: 5px;
+                word-break: break-all;
+                @media (max-width: 650px) {
+                    max-width: 80%;
+                }
+                p {
+                    font-size: 18px;
+                    font-weight: 100;
+                }
+                .time {
+                    font-size: 12px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

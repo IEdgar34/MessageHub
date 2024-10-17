@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Message Hub Chat " />
+        <meta name="author" content="Edgar Levonyan" />
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+        <link rel="manifest" href="favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png" />
+        <meta name="theme-color" content="#ffffff" />
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>MessageHub</title>
+    </head>
+    <body>
+        <div class="message__block"></div>
+        <div class="container">
+            <div class="chat__wrapper">
+                <section class="header">
+                    <h1>header</h1>
+                    <img src="images/loggo.gif" alt="logo" class="header__logo" />
+                    <div aria-label="open search" class="search__open"></div>
+                    <div class="loginin__wrap">
+                        <a aria-label="Login In" href="#" class="loginin">Login in</a>
+                        <div></div>
+                        <a aria-label="create acount" href="#" class="registration">Create your account</a>
+                    </div>
+                    <div class="logout__wrap"><a aria-label="log out" href="#" class="logout">Log out</a></div>
+                </section>
+                <section class="bar">
+                    <h1>Bar</h1>
+                    <input placeholder="search" type="text" class="search" />
+                    <div class="search__result"></div>
+                    <ul class="user__wrapper"></ul>
+                </section>
+                <section class="chat">
+                    <h1>Chat</h1>
+                    <h2 class="chat__wrap-username"></h2>
+                    <div class="chat__wrap"></div>
+                    <div class="chat__message-wrapper">
+                        <textarea placeholder="message" name="message" id="message" class="message"></textarea>
+                        <button class="chat__message-send"><img src="icons/icons8-telegram.svg" alt="send" /></button>
+                    </div>
+                </section>
+                <section class="footer">
+                    <h1>footer</h1>
+                </section>
+            </div>
+        </div>
+
+        <div class="form">
+            <div class="anim">
+                <form class="form__data">
+                    <div class="form__data_block">
+                        <!--  <label for="name">name</label> -->
+                        <input required autocomplete="additional-name" placeholder="Name" type="text" name="name" id="name" class="text" aria-describedby="name-help" />
+                        <span id="name-help"></span>
+                    </div>
+                    <div class="form__data_block">
+                        <!-- <label for="surname">surname</label> -->
+                        <input required autocomplete="family-name" placeholder="Surname" type="text" name="surname" id="surname" class="text" aria-describedby="surname-help" />
+                        <span id="surname-help"></span>
+                    </div>
+                    <div class="form__data_block">
+                        <!-- <label for="email">email</label> -->
+                        <input required autocomplete="email" placeholder="Email" type="email" name="email" id="email" class="email" aria-describedby="emd-help" />
+                        <span id="emd-help"></span>
+                    </div>
+                    <div class="form__data_block">
+                        <!-- <label for="password">password</label> -->
+                        <input required autocomplete="off" placeholder="Password" type="password" name="password" id="password" class="password" aria-describedby="pwd-help" />
+                        <span id="pwd-help"></span>
+                    </div>
+                    <div class="form__btn_wrap">
+                        <a aria-label="Close form" href="#" class="form__close">&times;</a>
+                        <button aria-label="Send form" type="submit" class="form__send">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="form__log">
+            <div class="anim">
+                <form class="form__log-data">
+                    <div class="icons__wrap">
+                        <img src="icons/chat.svg" alt="" />
+                    </div>
+                    <div class="df">
+                        <input autocomplete="email" placeholder="Email" type="email" name="email" id="logininemail" class="email" aria-describedby="em-help" />
+                        <span id="em-help"></span>
+                    </div>
+                    <div class="df">
+                        <input autocomplete="off" placeholder="Password" type="password" name="password" id="logininpassword" class="password" aria-describedby="pw-help" />
+                        <span id="pw-help"></span>
+                    </div>
+                    <div class="form__btn_wrap">
+                        <a href="#" class="formlog__close">&times;</a>
+                        <button class="formlog__send">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="notification">
+            <span class="notification__close">&times;</span>
+            <h2>🚧 Проект в стадии разработки 🚧</h2>
+            <p>Добро пожаловать в мой пет-проект! 🙌</p>
+            <h3>О проекте</h3>
+            <p>
+                Этот проект активно разрабатывается и находится на ранней стадии. Многие функции и компоненты пока не завершены, а некоторые части могут быть изменены или
+                доработаны в будущем. Я постоянно работаю над улучшением кода и добавлением новых возможностей, поэтому финальная версия проекта может существенно отличаться от
+                текущей.
+            </p>
+            <ul>
+                <li>💡 Новые фичи и функционал будут добавляться по мере их разработки.</li>
+                <li>🛠️ Возможны баги и недоработки.</li>
+                <li>🔄 Частые изменения структуры кода и архитектуры.</li>
+                <li>📦 Некоторые разделы или компоненты могут временно не работать.</li>
+            </ul>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
